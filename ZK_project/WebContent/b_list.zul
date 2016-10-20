@@ -1,0 +1,33 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<listbox id='lb'>
+    <listitem label="${each}" forEach="Apple, Orange, Strawberry" ></listitem>
+</listbox>
+
+<button id="ok" label="OK" autodisable="ok,cancel" onClick="alert(lb.getSelectedItem().label)"/>
+<button id="cancel" label="Cancel" autodisable="ok" />
+
+
+<window title="test of autodisable">
+        <fisheyebar><fisheye id="fish1" /></fisheyebar>
+         
+        <zscript>
+        import java.awt.*;
+        import java.awt.image.*;
+        import java.awt.geom.*;
+         
+         
+        void draw() {
+            BufferedImage bi = new BufferedImage(200, 200, BufferedImage.TYPE_INT_RGB);
+            Graphics2D g2d = bi.createGraphics();
+            Line2D line = new Line2D.Double(0, 0, bi.getWidth(), bi.getHeight());
+            g2d.setColor(Color.blue);
+            g2d.setStroke(new BasicStroke(100));
+            g2d.draw(line);
+            fish1.setImageContent(bi);
+        }
+         
+        draw();
+        </zscript> 
+    </window>
+</zk>

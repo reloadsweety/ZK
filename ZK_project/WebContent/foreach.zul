@@ -1,0 +1,12 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<zscript>
+{
+	grades = new String[] {"Best", "Better", "Good"};
+}
+</zscript>
+<listbox>
+    <listitem label="${each}" forEach="Apple, Orange, Strawberry"/>
+</listbox>
+
+</zk>

@@ -1,0 +1,22 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+
+<zk>
+<zscript>fruit = "gg"</zscript>
+	<tabbox id="tb" hflex="1" >
+		<tabs id="tbs">
+			<tab label="Tab 1" closable="true" />
+			<tab label="Tab 2" closable="true" />
+			<tab label="Tab 3" closable="true" />
+			<tab label="Tab 4" closable="true" />
+			<tab id="t5" label="Tab 5" closable="false" />
+		</tabs>
+		
+		<tabpanels id="tbp">
+			<tabpanel onClick="tbs.appendChild(new Tab();tbp.appendChild((new Tabpanel()))"> GGG </tabpanel>
+			<tabpanel>This is panel 2 The second panel</tabpanel>
+			<tabpanel>This is panel 3</tabpanel>
+			<tabpanel>This is panel 4</tabpanel>
+			<tabpanel>This is panel 5</tabpanel>
+		</tabpanels>
+	</tabbox>
+</zk>
