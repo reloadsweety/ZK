@@ -1,0 +1,46 @@
+
+<zk>
+	<listbox>
+		<listitem label="${each}" forEach="Apple, Orange, Strawberry" />
+		<!--     <listitem label="Apple"/> -->
+		<!--     <listitem label="Orange"/> -->
+		<!--     <listitem label="Strawberry"/> -->
+	</listbox>
+
+	<space />
+
+	<zscript>grades = new String[] {"Best", "Better", "Good"};</zscript>
+	<listbox>
+    	<listitem label="${each}" forEach="${grades}"/>    
+	</listbox>
+	
+	<space  />
+	
+	<hlayout>
+
+    <zscript>
+	    classes = new String[] {"College", "Graduate"};
+	    grades = new Object[] {
+	        new String[] {"Best", "Better"}, new String[] {"A++", "A+", "A"}
+	    };
+	    </zscript>
+	    <listbox width="200px" forEach="${classes}" >
+	        <listhead>
+	            <listheader label="${each}"/>
+	        </listhead>
+	        <listitem label="${forEachStatus.previous.each}: ${each}"     forEach="${grades[forEachStatus.index]}" />
+	    </listbox>
+	</hlayout>
+	
+	<space bar="true" />
+	
+	<window>
+	    <button label="${each}" forEach="apple, orange"  onClick='alert(self.label);  tabs0.appendChild(new Tab("GAME")); tbp.appendChild( (new Tabpanel())); tb.setSelectedTab(tb.getTabs().getLastChild());'>
+	     	<zscript>
+	  		 //self.parent.appendChild(new Label("" + each));
+	       	</zscript>
+	    </button>
+	</window>
+	
+</zk>
+	

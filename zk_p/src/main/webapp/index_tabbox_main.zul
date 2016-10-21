@@ -1,0 +1,16 @@
+<?page title="GORSUTLAME"?>
+<!-- <?link  rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css"?> -->
+
+<zk>
+<tabbox hflex="1"  orient="left" vflex="1" id="tb">
+    <tabs id="tabs0"  width="200px">
+        <tab label="foreach.zul" />
+        <tab label="giz_menupopup.zul" onClick=""/>
+        <tab label="Tab3" />
+    </tabs>
+    <tabpanels id="tbp" >
+        <tabpanel><include src="foreach.zul"/></tabpanel>
+        <tabpanel><include src="gird_menupopup.zul"/></tabpanel>
+    </tabpanels>
+</tabbox>
+</zk> 
